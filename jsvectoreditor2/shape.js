@@ -77,23 +77,21 @@ VectorEditor.prototype.drawGrid = function(){
 }
 
 VectorEditor.prototype.move = function(shape, x, y){
-  //HACKITY HACK HACK
-  //var rot = null;
-  //if(shape._ && shape._.rt){
-  //  rot = shape._.rt.deg
-  //}
-  
-  //<here's the part that isn't a hack>
-  shape.translate(x,y)
-  //</end non-hack>
-  
-  //HACKITY HACK HACK
-  //if(rot){
-  //  shape.rotate(rot,true)//absolutelyness
-  //}
-  //if(shape._ && shape._.rt){
-  //  shape.rotate(shape._.rt.deg, true)
-  //}
+
+//  shape.translate(x,y)
+
+//	VectorEditor.prototype.move = function(shape, x0, y0){
+	    var e = jQuery("rect");
+	    e = e.get()[0];
+
+	    var x = parseInt(e.getAttribute("x"));
+	    var y = parseInt(e.getAttribute("y"));
+
+	    e.setAttribute("x", x+parseInt(x0));
+	    e.setAttribute("y", y+(y0));
+	    //console.log([x,y].join(","));
+	//}
+
 }
 
 
