@@ -271,9 +271,9 @@
       //editor.draw.rect(100,100,480,272).attr("stroke-width", 0).attr("fill", "white")
       setMode("select");
       
-      jQuery("svg").css("-webkit-transform", "translateZ(1px)");
-      jQuery("svg").css("-ms-transform", "translateZ(1px)");
-      jQuery("svg").css("transform", "translateZ(1px)");
+      jQuery("svg").css("-webkit-transform", "scaleZ(1)");
+      jQuery("svg").css("-ms-transform", "scaleZ(1)");
+      jQuery("svg").css("transform", "scaleZ(1)");
     })
     $(window).resize(function(){
       editor.draw.setSize($(window).width(),$(window).height())
