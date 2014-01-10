@@ -76,7 +76,7 @@ VectorEditor.prototype.drawGrid = function(){
   this.draw.drawGrid(0, 0, 480, 272, 10, 10, "blue").toBack()
 }
 
-VectorEditor.prototype.move = function(shape, x, y){
+VectorEditor.prototype.move = function(shape, x0, y0){
 
 //  shape.translate(x,y)
 
