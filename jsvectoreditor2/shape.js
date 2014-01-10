@@ -76,7 +76,7 @@ VectorEditor.prototype.drawGrid = function(){
   this.draw.drawGrid(0, 0, 480, 272, 10, 10, "blue").toBack()
 }
 
-VectorEditor.prototype.move = function(shape, x0, y0){
+VectorEditor.prototype.move = function(shape, x, y){
 
 //  shape.translate(x,y)
 
@@ -84,11 +84,11 @@ VectorEditor.prototype.move = function(shape, x0, y0){
 	    var e = jQuery("rect");
 	    e = e.get()[0];
 
-	    var x = parseInt(e.getAttribute("x"));
-	    var y = parseInt(e.getAttribute("y"));
+	    var x1 = parseInt(e.getAttribute("x"));
+	    var y1 = parseInt(e.getAttribute("y"));
 
-	    e.setAttribute("x", x+parseInt(x0));
-	    e.setAttribute("y", y+(y0));
+	    e.setAttribute("x", x1+parseInt(x) );
+	    e.setAttribute("y", y1+parseInt(y) );
 	    //console.log([x,y].join(","));
 	//}
 
