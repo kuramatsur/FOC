@@ -275,9 +275,9 @@
       editor.resize(shape, 200,150, 100, 100);
       editor.unselect();
       
-      jQuery("svg").css("-webkit-transform", "rotateX(0deg)");
-      jQuery("svg").css("-ms-transform", "rotateX(0deg)");
-      jQuery("svg").css("transform", "rotateX(0deg)");
+      jQuery("svg").css("-webkit-transform", "rotateX(-1deg)");
+      jQuery("svg").css("-ms-transform", "rotateX(-1deg)");
+      jQuery("svg").css("transform", "rotateX(-1deg)");
     })
     $(window).resize(function(){
       editor.draw.setSize($(window).width(),$(window).height())
