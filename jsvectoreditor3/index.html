@@ -268,12 +268,16 @@
 
       $(document).ready(function(){
       editor = new VectorEditor(document.getElementById("canvas"), $(window).width(),$(window).height());
-      //editor.draw.rect(100,100,480,272).attr("stroke-width", 0).attr("fill", "white")
-      setMode("select");
+      var shape = editor.draw.rect(100,100,0,0).attr({"fill-opacity": 0.15,	  "stroke-opacity": 0.5,	  "fill": "#ff0000", "stroke": "#ff0000"}); 
+      shape.id = editor.generateUUID();
+
+      editor.addShape(shape) 
+      editor.resize(shape, 200,150, 100, 100);
+      editor.unselect();
       
-      jQuery("svg").css("-webkit-transform", "rotateX(1deg)");
-      jQuery("svg").css("-ms-transform", "rotateX(1deg)");
-      jQuery("svg").css("transform", "rotateX(1deg)");
+      jQuery("svg").css("-webkit-transform", "rotateX(0deg)");
+      jQuery("svg").css("-ms-transform", "rotateX(0deg)");
+      jQuery("svg").css("transform", "rotateX(0deg)");
     })
     $(window).resize(function(){
       editor.draw.setSize($(window).width(),$(window).height())
